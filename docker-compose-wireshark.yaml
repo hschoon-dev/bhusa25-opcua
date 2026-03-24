@@ -1,0 +1,62 @@
+name: opcua-lab
+
+services:
+  # ── OPC UA server ───────────────────────────────────────────────────────────
+  opcua-server:
+    build:
+      context: ./asyncua-server
+      dockerfile: Dockerfile
+    image: opcua-sign-encrypt-server:latest
+    container_name: opcua-server
+    restart: unless-stopped
+    attach: false
+
+    # Publish to Windows host so traffic can traverse the Docker Desktop backend
+    ports:
+      - "4840:4840"
+
+    volumes:
+      - ./asyncua-server/certs:/app/certs:ro
+
+    environment:
+      PYTHONUNBUFFERED: "1"
+
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket; socket.create_connection(('localhost', 4840), 2)"]
+      interval: 15s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+
+  # ── opcattack ────────────────────────────────────────────────────────────────
+  opcattack:
+    build:
+      context: ./opcattack
+      dockerfile: Dockerfile
+    image: opcattack:latest
+    container_name: opcattack
+
+    depends_on:
+      opcua-server:
+        condition: service_healthy
+
+    volumes:
+      - opcattack-cache:/var/cache/opcattack
+      # - ./asyncua-server/certs/trusted/my_client.der:/certs/client_cert.der:ro
+      # - ./path/to/my_client_key.pem:/certs/client_key.pem:ro
+
+    environment:
+      PYTHONUNBUFFERED: "1"
+
+    # IMPORTANT:
+    # Talk to the server through the Windows host, not via Docker service name.
+    #
+    # Example:
+    #   docker compose run --rm opcattack check opc.tcp://host.docker.internal:4840
+    #
+    # NOT:
+    #   docker compose run --rm opcattack check opc.tcp://opcua-server:4840
+
+volumes:
+  opcattack-cache:
+    driver: local
